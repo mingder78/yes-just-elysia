@@ -1,7 +1,12 @@
 {
   "name": "yes-just-elysia",
+  "version": "0.0.1",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "dev": "bun run --watch index.ts",
+    "start": "bun run index.ts",
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },

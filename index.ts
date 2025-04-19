@@ -43,3 +43,5 @@ const app = new Elysia()
         }
     })
     .listen(8080)
+
+console.log('Server running at http://localhost:8080/swagger');
