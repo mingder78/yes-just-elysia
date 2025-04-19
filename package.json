@@ -1,0 +1,17 @@
+{
+  "name": "yes-just-elysia",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/bearer": "^1.2.0",
+    "@elysiajs/jwt": "^1.2.0",
+    "@elysiajs/swagger": "^1.2.2",
+    "elysia": "^1.2.25"
+  }
+}
