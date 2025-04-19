@@ -1,11 +1,10 @@
 {
   "name": "yes-just-elysia",
-  "version": "0.0.1",
-  "module": "index.ts",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch index.ts",
-    "start": "bun run index.ts",
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
@@ -17,6 +16,9 @@
     "@elysiajs/bearer": "^1.2.0",
     "@elysiajs/jwt": "^1.2.0",
     "@elysiajs/swagger": "^1.2.2",
-    "elysia": "^1.2.25"
+    "@xata.io/client": "^0.30.1",
+    "@xata.io/kysely": "^0.2.1",
+    "elysia": "^1.2.25",
+    "kysely": "^0.28.1"
   }
 }

@@ -1,5 +1,17 @@
 # yes just elysia
 
+## xata
+
+```
+async function getUsers() {
+  const users = await db.selectFrom("users").selectAll().execute();
+  return users;
+}
+
+const users = await getUsers();
+console.log(users)
+```
+
 ## login
 
 ```

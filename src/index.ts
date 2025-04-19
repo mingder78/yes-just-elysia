@@ -2,13 +2,14 @@ import { Elysia, t} from 'elysia'
 import { bearer } from '@elysiajs/bearer'
 import { jwt } from '@elysiajs/jwt'
 import { swagger } from '@elysiajs/swagger'
+import { db } from './db' 
 
 const app = new Elysia()
     .use(swagger())
     .use(bearer())
     .use(jwt({
         name: 'jwt',
-        secret: 'your-secret-key'
+        secret: import.meta.env.JWT_SECRET
     }))
   // Login endpoint to generate a token
   .post(
@@ -43,5 +44,13 @@ const app = new Elysia()
         }
     })
     .listen(8080)
+
+async function getUsers() {
+  const users = await db.selectFrom("users").selectAll().execute();
+  return users;
+}
+
+const users = await getUsers();
+console.log(users)
 
 console.log('Server running at http://localhost:8080/swagger');
